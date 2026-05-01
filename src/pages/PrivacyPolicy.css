@@ -1,0 +1,83 @@
+.privacy {
+  min-height: 50vh;
+  padding: calc(64px + 48px) 24px 80px;
+  position: relative;
+}
+
+.privacy::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 55% at 85% 5%, rgba(196, 97, 58, 0.12), transparent 55%),
+    radial-gradient(ellipse 65% 50% at 10% 90%, rgba(61, 90, 62, 0.1), transparent 50%);
+}
+
+.privacy-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.privacy-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--moss);
+  margin-bottom: 12px;
+}
+
+.privacy-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 900;
+  color: var(--bark);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--sand-dark);
+}
+
+.privacy-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.privacy-section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bark);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.privacy-section-p {
+  font-size: 0.96rem;
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.privacy-section-p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .privacy {
+    padding: calc(64px + 32px) 20px 64px;
+  }
+
+  .privacy-title {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+  }
+
+  .privacy-sections {
+    gap: 28px;
+  }
+}

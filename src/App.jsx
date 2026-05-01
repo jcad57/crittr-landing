@@ -1,28 +1,19 @@
-import './index.css'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import CoCare from './components/CoCare'
-import Pricing from './components/Pricing'
-import Footer from './components/Footer'
+import "./index.css";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import SiteLayout from "./layouts/SiteLayout";
+import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
-    <div className="app">
-      <nav className="nav">
-        <div className="nav-inner">
-          <span className="nav-logo">crittr</span>
-          <div className="nav-links">
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#pricing" className="nav-cta">Get Started</a>
-          </div>
-        </div>
-      </nav>
-      <Hero />
-      <Features />
-      <CoCare />
-      <Pricing />
-      <Footer />
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route element={<SiteLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }

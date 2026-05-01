@@ -20,10 +20,12 @@
 }
 
 .footer-logo {
+  display: inline-block;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 900;
   color: var(--cream);
+  text-decoration: none;
 }
 
 .footer-links {

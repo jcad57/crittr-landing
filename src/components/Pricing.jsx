@@ -1,22 +1,21 @@
-import './Pricing.css'
+import "./Pricing.css";
 
 const free = [
-  'Full profile for 1 pet',
-  'Unlimited activity logging',
-  'Health hub (meds, vaccines, weight)',
-  'Vet visit tracking',
-  'Dashboard & history',
-]
+  "Full profile for 1 pet",
+  "Unlimited activity logging",
+  "Health hub (meds, vaccines, weight)",
+  "Vet visit tracking",
+  "Dashboard & history",
+];
 
 const pro = [
-  'Everything in Free',
-  'Unlimited pets',
-  'Co-care sharing & permissions',
-  'Medical record attachments',
-  'CrittrAI pet assistant',
-  'Push notifications & reminders',
-  'Priority support',
-]
+  "Unlimited pets",
+  "Co-care sharing & permissions",
+  "Medical record attachments",
+  "CrittrAI pet assistant",
+  "Push notifications & reminders",
+  "Priority support",
+];
 
 export default function Pricing() {
   return (
@@ -24,11 +23,13 @@ export default function Pricing() {
       <div className="pricing-inner">
         <div className="section-label">Simple pricing</div>
         <h2 className="section-title">
-          Start free,<br />
+          Start free,
+          <br />
           <em>upgrade when ready.</em>
         </h2>
         <p className="section-sub">
-          No credit card to get started. Crittr Pro is billed through Stripe — cancel anytime.
+          No credit card to get started. Crittr Pro is billed through Stripe —
+          cancel anytime.
         </p>
 
         <div className="pricing-cards">
@@ -42,11 +43,16 @@ export default function Pricing() {
               Everything you need to get one pet fully set up and cared for.
             </p>
             <ul className="plan-features">
-              {free.map(f => (
-                <li key={f}><span className="feat-check free-check">✓</span>{f}</li>
+              {free.map((f) => (
+                <li key={f}>
+                  <span className="feat-check free-check">✓</span>
+                  {f}
+                </li>
               ))}
             </ul>
-            <a href="#" className="plan-btn free-btn">Download the App</a>
+            <a href="#" className="plan-btn free-btn">
+              Download the App
+            </a>
           </div>
 
           <div className="pricing-card pro-card">
@@ -60,15 +66,20 @@ export default function Pricing() {
               Unlimited pets, shared care, AI help, and peace of mind reminders.
             </p>
             <ul className="plan-features">
-              {pro.map(f => (
-                <li key={f}><span className="feat-check pro-check">✓</span>{f}</li>
+              {pro.map((f) => (
+                <li key={f}>
+                  <span className="feat-check pro-check">✓</span>
+                  {f}
+                </li>
               ))}
             </ul>
-            <a href="#" className="plan-btn pro-btn">Start Free Trial</a>
+            <a href="#" className="plan-btn pro-btn">
+              Start Free Trial
+            </a>
             <p className="plan-note">7-day free trial · Cancel anytime</p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

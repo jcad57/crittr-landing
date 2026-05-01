@@ -68,6 +68,7 @@ body {
   font-weight: 900;
   color: var(--bark);
   letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
 .nav-links {
