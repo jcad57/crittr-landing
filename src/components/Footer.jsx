@@ -9,7 +9,11 @@ export default function Footer() {
           <Link to="/" className="footer-logo">
             crittr
           </Link>
-          <p>Built with care for pets<br />and the people who love them.</p>
+          <p>
+            Built with care for pets
+            <br />
+            and the people who love them.
+          </p>
         </div>
         <div className="footer-links">
           <div className="footer-col">
@@ -27,9 +31,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 Crittr. All rights reserved.</span>
+        <span>© 2026 Jon Deichmann. All rights reserved.</span>
         <span>iOS & Android</span>
       </div>
     </footer>
-  )
+  );
 }

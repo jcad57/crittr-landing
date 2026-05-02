@@ -1,4 +1,5 @@
 import "./Hero.css";
+import dashboardScreenshot from "../assets/dashboard.png";
 
 export default function Hero() {
   return (
@@ -19,15 +20,15 @@ export default function Hero() {
         <h1 className="hero-title">
           Every pet,
           <br />
-          <em>perfectly</em>
+          <em>simply</em>
           <br />
           cared for.
         </h1>
 
         <p className="hero-subtitle">
-          Crittr keeps daily care, health history, and household coordination in
-          one calm, organized place — built for the people who love their
-          animals most.
+          Crittr removes the stress of remembering and tracking daily care for
+          your pets so you have fewer "did we ... ?" moments. Your pets can't
+          remind you. Crittr can.
         </p>
 
         <div className="hero-actions">
@@ -51,8 +52,8 @@ export default function Hero() {
           </div>
           <div className="stat-divider" />
           <div className="stat">
-            <span className="stat-num">AI</span>
-            <span className="stat-label">Pet assistant</span>
+            <span className="stat-num">Complete</span>
+            <span className="stat-label">Peace of mind</span>
           </div>
         </div>
       </div>
@@ -60,57 +61,20 @@ export default function Hero() {
       <div className="hero-visual">
         <div className="phone-frame">
           <div className="phone-screen">
-            <div className="mock-header">
-              <span className="mock-logo">crittr</span>
-              <div className="mock-avatar" />
-            </div>
-            <div className="mock-pet-card">
-              <div className="mock-pet-photo">🐕</div>
-              <div className="mock-pet-info">
-                <span className="mock-pet-name">Biscuit</span>
-                <span className="mock-pet-detail">
-                  Golden Retriever · 3 yrs
-                </span>
-              </div>
-              <div className="mock-status">✓ All good</div>
-            </div>
-            <div className="mock-section-title">Today's Care</div>
-            <div className="mock-activities">
-              <div className="mock-activity done">
-                <span className="act-icon">🦮</span>
-                <div className="act-info">
-                  <span>Morning walk</span>
-                  <span className="act-time">7:23 AM · 22 min</span>
-                </div>
-                <span className="act-check">✓</span>
-              </div>
-              <div className="mock-activity done">
-                <span className="act-icon">🍗</span>
-                <div className="act-info">
-                  <span>Breakfast</span>
-                  <span className="act-time">8:10 AM · 1 cup</span>
-                </div>
-                <span className="act-check">✓</span>
-              </div>
-              <div className="mock-activity pending">
-                <span className="act-icon">💊</span>
-                <div className="act-info">
-                  <span>Heartworm pill</span>
-                  <span className="act-time">Due by 6:00 PM</span>
-                </div>
-                <span className="act-pending">!</span>
-              </div>
-            </div>
-            <div className="mock-ai-bubble">
-              <span className="ai-icon">✦</span>
-              <span>Biscuit's next vet check is in 3 weeks.</span>
-            </div>
+            <img
+              src={dashboardScreenshot}
+              alt="Crittr home dashboard showing daily progress rings, activity feed, and navigation"
+              className="phone-screenshot"
+              width={1206}
+              height={2622}
+              loading="eager"
+            />
           </div>
         </div>
         <div className="phone-shadow" />
         <div className="floating-pill pill-1">🐾 Walk logged</div>
         <div className="floating-pill pill-2">💊 Meds on track</div>
-        <div className="floating-pill pill-3">👨‍👩‍👧 Family shared</div>
+        <div className="floating-pill pill-3">👨‍👩‍👧 Shared with Mom</div>
       </div>
     </section>
   );

@@ -19,13 +19,13 @@ const features = [
   {
     icon: "✦",
     title: "CrittrAI Assistant",
-    desc: "Ask questions grounded in your pet's actual data — not generic web results. Real answers for your real animals.",
+    desc: "Ask questions grounded in your pet's actual data — not generic web results. Tailored answers for your furry friends.",
     pro: true,
   },
   {
     icon: "👥",
     title: "Co-Care Sharing",
-    desc: "Invite family members or sitters by email with fine-grained permission controls. Everyone stays in sync.",
+    desc: "Invite family members or sitters by email with customized permission controls. Everyone stays in sync.",
     pro: true,
   },
   {

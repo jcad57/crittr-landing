@@ -20,33 +20,33 @@ export default function CoCare() {
                   <div className="cc-avatar" style={{ background: "#C4613A" }}>
                     S
                   </div>
-                  <span>Sarah</span>
+                  <span>Jon</span>
                   <span className="cc-role">Owner</span>
                 </div>
                 <div className="cc-carer">
                   <div className="cc-avatar" style={{ background: "#3D5A3E" }}>
                     M
                   </div>
-                  <span>Marcus</span>
+                  <span>Ashley</span>
                   <span className="cc-role">Full access</span>
                 </div>
                 <div className="cc-carer">
                   <div className="cc-avatar" style={{ background: "#C9A84C" }}>
                     J
                   </div>
-                  <span>Jenny</span>
+                  <span>Dad</span>
                   <span className="cc-role">Log only</span>
                 </div>
               </div>
             </div>
             <div className="cc-activity">
               <span className="cc-activity-dot" />
-              <span>Marcus logged a meal · 2h ago</span>
+              <span>Ashley logged a meal · 2h ago</span>
             </div>
           </div>
           <div className="cocare-notif">
             <span>🔔</span>
-            <span>Jenny completed Bart's evening meds</span>
+            <span>Jon completed Bart's evening meds</span>
           </div>
         </div>
 
