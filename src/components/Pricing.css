@@ -93,6 +93,88 @@
 .free-card .price-period { color: var(--text-muted); }
 .pro-card .price-period { color: rgba(250,247,242,0.5); }
 
+.pro-billing {
+  margin-bottom: 16px;
+}
+
+.pro-billing-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  margin-bottom: 18px;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pro-billing-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: rgba(250, 247, 242, 0.52);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  min-height: 52px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  line-height: 1.15;
+}
+
+.pro-billing-tab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.pro-billing-tab.is-active {
+  background: var(--terracotta);
+  color: white;
+  box-shadow: 0 4px 16px rgba(196, 97, 58, 0.42);
+}
+
+.pro-billing-tab:not(.is-active):hover {
+  color: rgba(250, 247, 242, 0.92);
+}
+
+.pro-billing-tab-hint {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.pro-billing-tab:not(.is-active) .pro-billing-tab-hint {
+  color: var(--gold);
+}
+
+.pro-billing-tab.is-active .pro-billing-tab-hint {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.pro-billing-panel .plan-price {
+  margin-bottom: 8px;
+}
+
+.price-savings-line {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.price-savings-line-muted {
+  opacity: 0.92;
+}
+
+.pro-card .price-savings-line { color: rgba(250, 247, 242, 0.55); }
+
 .plan-desc {
   font-size: 0.88rem;
   line-height: 1.6;

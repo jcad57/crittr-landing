@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Pricing.css";
 
 const free = [
@@ -17,7 +18,14 @@ const pro = [
   "Priority support",
 ];
 
+const PRO_MONTHLY = 4.99;
+const PRO_ANNUAL = 39.99;
+const proAnnualMonthlyEquiv = (PRO_ANNUAL / 12).toFixed(2);
+const proAnnualSavingsYear = (PRO_MONTHLY * 12 - PRO_ANNUAL).toFixed(2);
+
 export default function Pricing() {
+  const [proBilling, setProBilling] = useState("annual");
+
   return (
     <section className="pricing" id="pricing">
       <div className="pricing-inner">
@@ -27,10 +35,7 @@ export default function Pricing() {
           <br />
           <em>upgrade when ready.</em>
         </h2>
-        <p className="section-sub">
-          No credit card to get started. Crittr Pro is billed through Stripe —
-          cancel anytime.
-        </p>
+        <p className="section-sub">No credit card to get started.</p>
 
         <div className="pricing-cards">
           <div className="pricing-card free-card">
@@ -58,9 +63,66 @@ export default function Pricing() {
           <div className="pricing-card pro-card">
             <div className="pro-ribbon">Most Popular</div>
             <div className="plan-name">Crittr Pro</div>
-            <div className="plan-price">
-              <span className="price-amount">$4.99</span>
-              <span className="price-period">/ month</span>
+            <div className="pro-billing">
+              <div
+                className="pro-billing-tabs"
+                role="tablist"
+                aria-label="Crittr Pro billing period"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  id="pro-tab-annual"
+                  aria-controls="pro-panel-billing"
+                  aria-selected={proBilling === "annual"}
+                  className={`pro-billing-tab${proBilling === "annual" ? " is-active" : ""}`}
+                  onClick={() => setProBilling("annual")}
+                >
+                  Annual
+                  <span className="pro-billing-tab-hint">Best value</span>
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="pro-tab-monthly"
+                  aria-controls="pro-panel-billing"
+                  aria-selected={proBilling === "monthly"}
+                  className={`pro-billing-tab${proBilling === "monthly" ? " is-active" : ""}`}
+                  onClick={() => setProBilling("monthly")}
+                >
+                  Monthly
+                </button>
+              </div>
+              <div
+                id="pro-panel-billing"
+                role="tabpanel"
+                aria-labelledby={
+                  proBilling === "annual" ? "pro-tab-annual" : "pro-tab-monthly"
+                }
+                className="pro-billing-panel"
+              >
+                {proBilling === "annual" ? (
+                  <>
+                    <div className="plan-price">
+                      <span className="price-amount">${PRO_ANNUAL.toFixed(2)}</span>
+                      <span className="price-period">/ year</span>
+                    </div>
+                    <p className="price-savings-line">
+                      {`~$${proAnnualMonthlyEquiv}/mo billed annually · Save $${proAnnualSavingsYear}/year vs paying monthly`}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <div className="plan-price">
+                      <span className="price-amount">${PRO_MONTHLY.toFixed(2)}</span>
+                      <span className="price-period">/ month</span>
+                    </div>
+                    <p className="price-savings-line price-savings-line-muted">
+                      {`Billed monthly · Switch to annual to save $${proAnnualSavingsYear}/year (~$${proAnnualMonthlyEquiv}/mo equivalent)`}
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
             <p className="plan-desc">
               Unlimited pets, shared care, AI help, and peace of mind reminders.

@@ -24,15 +24,13 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <span className="footer-col-title">Support</span>
-            <a href="#">Help Center</a>
-            <Link to="/privacy">Privacy Policy</Link>
-            <a href="#">Send Feedback</a>
+            <a href="mailto:support@crittrapp.com">support@crittrapp.com</a>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 Jon Deichmann. All rights reserved.</span>
-        <span>iOS & Android</span>
+        <span>© 2026 Pegasys Studios. All rights reserved.</span>
+        <span>iOS · Android coming soon</span>
       </div>
     </footer>
   );

@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-badge">
           <span className="badge-dot" />
-          Available on iOS & Android
+          Available on iOS · Android coming soon
         </div>
 
         <h1 className="hero-title">
