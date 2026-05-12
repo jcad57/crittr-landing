@@ -1,3 +1,4 @@
+import { APP_STORE_URL } from "../constants/links";
 import "./Hero.css";
 import dashboardScreenshot from "../assets/dashboard.png";
 
@@ -32,7 +33,12 @@ export default function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a href="#pricing" className="btn-primary">
+          <a
+            href={APP_STORE_URL}
+            className="btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Start for Free
           </a>
           <a href="#features" className="btn-ghost">

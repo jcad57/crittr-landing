@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { APP_STORE_URL } from "../constants/links";
 import "./Pricing.css";
 
 const free = [
@@ -55,7 +56,12 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <a href="#" className="plan-btn free-btn">
+            <a
+              href={APP_STORE_URL}
+              className="plan-btn free-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download the App
             </a>
           </div>
@@ -135,7 +141,12 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <a href="#" className="plan-btn pro-btn">
+            <a
+              href={APP_STORE_URL}
+              className="plan-btn pro-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Start Free Trial
             </a>
             <p className="plan-note">7-day free trial · Cancel anytime</p>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { APP_STORE_URL } from "../constants/links";
 import "./Footer.css";
 
 export default function Footer() {
@@ -20,7 +21,13 @@ export default function Footer() {
             <span className="footer-col-title">Product</span>
             <a href="/#features">Features</a>
             <a href="/#pricing">Pricing</a>
-            <a href="/#pricing">Download</a>
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download
+            </a>
           </div>
           <div className="footer-col">
             <span className="footer-col-title">Support</span>
