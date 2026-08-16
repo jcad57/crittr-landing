@@ -1,8 +1,28 @@
 import { APP_STORE_URL } from "../constants/links";
 import "./Hero.css";
 import dashboardScreenshot from "../assets/dashboard.png";
+import appStoreBadge from "../assets/download-apple.png";
+import googlePlayBadge from "../assets/download-google.png";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
+  const [ua, setUa] = useState("");
+
+  useEffect(() => {
+    // Runs exclusively on the client side
+    if (typeof window !== "undefined" && navigator.userAgent) {
+      setUa(navigator.userAgent);
+    }
+  }, []);
+
+  const isIOS =
+    ua.includes("iPhone") || ua.includes("iPad") || ua.includes("iPod");
+  const isAndroid = ua.includes("Android");
+  console.log(ua);
+  console.log(isIOS);
+  console.log(isAndroid);
+
   return (
     <section className="hero">
       <div className="hero-bg">
@@ -14,8 +34,16 @@ export default function Hero() {
 
       <div className="hero-inner">
         <div className="hero-badge">
-          <span className="badge-dot" />
-          Available on iOS · Android coming soon
+          <Link to={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <img src={appStoreBadge} width={"94px"} alt="Available on iOS" />
+          </Link>
+          <Link to={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <img
+              src={googlePlayBadge}
+              width={"100px"}
+              alt="Available on Google Play"
+            />
+          </Link>
         </div>
 
         <h1 className="hero-title">
@@ -44,23 +72,6 @@ export default function Hero() {
           <a href="#features" className="btn-ghost">
             See how it works →
           </a>
-        </div>
-
-        <div className="hero-stats">
-          <div className="stat">
-            <span className="stat-num">∞</span>
-            <span className="stat-label">Activity logs</span>
-          </div>
-          <div className="stat-divider" />
-          <div className="stat">
-            <span className="stat-num">1</span>
-            <span className="stat-label">Pet free forever</span>
-          </div>
-          <div className="stat-divider" />
-          <div className="stat">
-            <span className="stat-num">Complete</span>
-            <span className="stat-label">Peace of mind</span>
-          </div>
         </div>
       </div>
 

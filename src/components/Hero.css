@@ -27,7 +27,7 @@
 .blob-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, #C4613A, #E8DCC8);
+  background: radial-gradient(circle, #c4613a, #e8dcc8);
   top: -200px;
   right: -100px;
   animation: drift1 12s ease-in-out infinite;
@@ -36,7 +36,7 @@
 .blob-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, #3D5A3E, #5C8A5E);
+  background: radial-gradient(circle, #3d5a3e, #5c8a5e);
   bottom: -150px;
   left: -100px;
   animation: drift2 15s ease-in-out infinite;
@@ -45,7 +45,7 @@
 .blob-3 {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, #C9A84C, #E8DCC8);
+  background: radial-gradient(circle, #c9a84c, #e8dcc8);
   top: 40%;
   left: 35%;
   animation: drift3 18s ease-in-out infinite;
@@ -60,17 +60,34 @@
 }
 
 @keyframes drift1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, 40px) scale(1.05); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, 40px) scale(1.05);
+  }
 }
 @keyframes drift2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -30px) scale(1.08); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
 }
 @keyframes drift3 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(20px, 20px) scale(0.95); }
-  66% { transform: translate(-20px, 10px) scale(1.03); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, 20px) scale(0.95);
+  }
+  66% {
+    transform: translate(-20px, 10px) scale(1.03);
+  }
 }
 
 .hero-inner {
@@ -83,8 +100,6 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--sand);
-  border: 1px solid var(--sand-dark);
   color: var(--bark);
   padding: 6px 16px;
   border-radius: 50px;
@@ -103,15 +118,22 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.8); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 900;
-  line-height: 1.0;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: var(--bark);
   margin-bottom: 24px;
@@ -144,7 +166,7 @@
   color: var(--cream);
   padding: 16px 32px;
   border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -183,7 +205,7 @@
 }
 
 .stat-num {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--bark);
@@ -219,7 +241,7 @@
   padding: 12px;
   box-shadow:
     0 40px 80px rgba(44, 24, 16, 0.3),
-    0 0 0 1px rgba(255,255,255,0.1) inset;
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   position: relative;
   z-index: 2;
 }
@@ -286,17 +308,33 @@
 }
 
 @keyframes float1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 @keyframes float2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 860px) {
@@ -305,9 +343,19 @@
     text-align: center;
     padding: 100px 24px 60px;
   }
-  .hero-subtitle { max-width: 100%; }
-  .hero-actions { justify-content: center; }
-  .hero-stats { justify-content: center; }
-  .floating-pill { display: none; }
-  .hero-visual { margin-top: 20px; }
+  .hero-subtitle {
+    max-width: 100%;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+  .floating-pill {
+    display: none;
+  }
+  .hero-visual {
+    margin-top: 20px;
+  }
 }

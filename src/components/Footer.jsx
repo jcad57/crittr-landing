@@ -21,11 +21,7 @@ export default function Footer() {
             <span className="footer-col-title">Product</span>
             <a href="/#features">Features</a>
             <a href="/#pricing">Pricing</a>
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
               Download
             </a>
           </div>
@@ -37,7 +33,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Pegasys Studios. All rights reserved.</span>
-        <span>iOS · Android coming soon</span>
+        <span>iOS · Android</span>
       </div>
     </footer>
   );

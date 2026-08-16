@@ -17,6 +17,12 @@ const features = [
     desc: "Track medications, vaccination schedules, and upcoming vet visits so nothing slips through the cracks.",
   },
   {
+    icon: "🔔",
+    title: "Reminders & Notifications",
+    desc: "Push notifications for medications, vet visits, and care schedules. Because memory isn't a care plan.",
+    pro: false,
+  },
+  {
     icon: "✦",
     title: "CrittrAI Assistant",
     desc: "Ask questions grounded in your pet's actual data — not generic web results. Tailored answers for your furry friends.",
@@ -26,12 +32,6 @@ const features = [
     icon: "👥",
     title: "Co-Care Sharing",
     desc: "Invite family members or sitters by email with customized permission controls. Everyone stays in sync.",
-    pro: true,
-  },
-  {
-    icon: "🔔",
-    title: "Smart Reminders",
-    desc: "Push notifications for medications, vet visits, and care schedules. Because memory isn't a care plan.",
     pro: true,
   },
 ];
