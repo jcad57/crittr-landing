@@ -1,0 +1,50 @@
+{
+  "tool": "Built-in image_gen",
+  "prompts": [
+    {
+      "name": "hero-pets",
+      "transparent_background": true,
+      "prompt": "Use case: photorealistic-natural. Asset type: premium pet care landing page hero cutout. Create a warm, joyful editorial photograph of one healthy golden retriever sitting just behind one content brown-and-black tabby cat. The golden dog is tall at the right, looking at the camera with a happy natural relaxed open mouth, one tongue and anatomically correct teeth; the tabby cat sits nestled in front on the left, eyes softly closed, mouth closed. Show their heads, chests and front legs on a soft cream knit blanket along the lower edge. Square composition, both animals completely in frame, dog head upper right, cat head lower left. Warm natural window light, realistic fine golden fur, detailed whiskers, inviting friendly character. Real transparent background around the subjects and blanket, no room, no furniture, no scenery, no colored backdrop. Exactly two animals, each has exactly two ears, two eyes, one nose, anatomically plausible paws and limbs. No text, no graphics, no logos, no collars, no watermark.",
+      "savedAsset": "src/assets/images/hero-pets.webp"
+    },
+    {
+      "name": "daily-routines",
+      "transparent_background": true,
+      "prompt": "Use case: photorealistic-natural. Asset type: pet care website feature card, isolated photo cutout. A single healthy adult golden retriever leaning down to eat kibble from one elegant low off-white ceramic bowl with tiny terracotta speckles. Three-quarter front angle, head and ears centered in upper half, bowl completely visible at bottom, chest behind bowl and only two front paws visible. Horizontal 4:3 composition, the entire head and both natural ears fit inside frame. Soft warm natural studio light, detailed golden fur, premium friendly pet food photography. Genuine transparent background, no floor or backdrop except a very subtle natural contact shadow under bowl. Exactly one dog with two ears, two eyes, one nose and normal anatomy. Mouth naturally hidden behind the bowl rim, no bared teeth, no extra limbs, no text, no graphics, no watermark.",
+      "savedAsset": "src/assets/images/daily-routines.webp"
+    },
+    {
+      "name": "playful-tabby",
+      "transparent_background": true,
+      "prompt": "Use case: photorealistic-natural. Asset type: playful pet care landing page cutout to use over lavender and orange backgrounds. One adorable healthy brown-and-black striped tabby cat lying on its back playfully with soft fluffy belly visible and exactly four anatomically correct paws naturally relaxed and raised. Horizontal 4:3 composition, full cat visible with generous margins, head near lower left, hind paws near upper right. Looking toward camera with two green eyes, one nose, mouth closed, two ears, beautiful natural whiskers, one natural tail curled close to body. Premium editorial studio photograph, warm soft even light, highly detailed realistic fur. Real transparent background, no floor, no bedding, no props. Exactly one cat, exactly four legs and paws, no duplicate paws, no extra ears, no extra tail, no text, no watermark.",
+      "savedAsset": "src/assets/images/playful-tabby.webp"
+    },
+    {
+      "name": "care-together",
+      "transparent_background": false,
+      "prompt": "Use case: photorealistic-natural. Asset type: pet care landing page lifestyle photograph. Square close-up editorial photo of one woman with shoulder-length wavy brunette hair in a soft oatmeal chunky knit sweater warmly hugging one healthy adult golden retriever at home. She gently rests her face against the dog's right temple with eyes softly closed, a natural tender candid expression. Dog faces camera with joyful relaxed open mouth, anatomically correct teeth and one tongue, two natural ears, two eyes, one nose. One visible human hand gently rests on dog's shoulder with five anatomically correct fingers. Both heads fully inside the image, dog left foreground and woman right behind. Soft warm morning window light, ivory curtains softly blurred, cream and honey palette, realistic skin and fine golden fur. Natural intimate composition, no text, no graphics, no watermark, no extra people or animals, no duplicate features or limbs.",
+      "savedAsset": "src/assets/images/care-together.webp"
+    },
+    {
+      "name": "hero-pets-rounded",
+      "transparent_background": true,
+      "prompt": "Use case: photorealistic-natural. Asset type: transparent hero/CTA artwork for the Crittr pet care landing page. Input image 1 is a style and composition reference: use ONLY the dog-and-cat-on-a-blanket scene at the top right of the attached website mockup. Recreate that specific warm editorial composition: one large healthy golden retriever reclining on a soft ivory chunky knit blanket, dog positioned behind and to the right of a smaller relaxed brown tabby cat nestled against its chest in the front left. Golden retriever looks toward camera, head naturally tilted slightly, a joyful relaxed open mouth with one tongue and anatomically correct teeth. Cat has softly closed eyes and a closed mouth, leaning contentedly into the dog. The animals' silhouette rises like a gentle mountain from low blanket at left to the tall dog at center-right. Photoreal fur and natural warm studio light, cream and honey tones, friendly premium pet brand photography. CRITICAL COMPOSITION: show the complete blanket as one softly rounded organic mound beneath them, its left, right and bottom edges naturally curved and irregular with soft knit loops. Leave at least 8 percent truly transparent breathing space on ALL FOUR sides around the entire dog, cat and blanket. Absolutely NO straight vertical or horizontal cropped edges on the blanket or animals, no rectangular crop anywhere, no fur or blanket cut off by image boundaries. Entire silhouette must be visible, isolated, and smoothly blend onto a cream webpage. Transparent background outside the complete silhouette; do not include the peach backdrop, that will be added in CSS. No phones, no screen, no text, no icons, no arrows, no logos, no watermark, no other animals. Each animal exactly two ears, two eyes, one nose, correct natural paws. Landscape 4:3 composition.",
+      "reference": "Crittr Pet Care App Landing Page.png",
+      "savedAsset": "src/assets/images/hero-pets-rounded.webp"
+    },
+    {
+      "name": "care-together-card",
+      "transparent_background": true,
+      "prompt": "Use case: photorealistic-natural. Asset type: transparent photographic cutout for the Care together feature card of a premium pet care website. Input image 1 is the website mockup reference. Recreate ONLY the pose in the peach Care together card: one young adult brunette woman in a light oatmeal knit sweater, in profile on the right, gently kissing the temple of one small healthy tricolor Cavalier King Charles Spaniel, which sits on the left in her arms and looks toward the camera. Dog has two naturally long floppy ears, two brown eyes, a white blaze, black and chestnut face patches, one nose, closed natural mouth; no visible teeth or tongue. Woman has a natural affectionate expression with softly closed eyes; her hair softly falls behind her shoulder, and her arms hold the dog gently, hands mostly out of view. Both complete heads and upper torsos clearly visible with margins around hair and ears. Warm natural soft studio lighting, realistic skin, fine detailed dog fur, joyful affectionate premium editorial photograph. 4:3 landscape composition. Genuine transparent background; no room, no wall, no furniture, no rectangle photo background. Clean natural outer silhouette, no hard cuts at either side. Exactly one woman and one small spaniel, no golden retriever, no cat, no duplicate ears, no duplicate limbs, no extra fingers. No text, no graphic hearts or doodles, no logos, no watermark.",
+      "reference": "Crittr Pet Care App Landing Page.png",
+      "savedAsset": "src/assets/images/care-together-card.webp"
+    }
+  ],
+  "badges": {
+    "method": "Original project-native SVG artwork and text; no watermarked source images used",
+    "files": [
+      "src/assets/badges/app-store.svg",
+      "src/assets/badges/google-play.svg"
+    ]
+  }
+}

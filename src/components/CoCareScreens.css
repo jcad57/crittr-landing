@@ -1,0 +1,296 @@
+.cocare-app-screen {
+  --app-muted: #797c87;
+  --app-label: #a5998c;
+  --app-green: #104f45;
+  container-type: inline-size;
+  padding: 0 3%;
+  color: #191f2d;
+  font-family: var(--nunito);
+  font-size: 3.6cqw;
+  line-height: 1.4;
+}
+.cocare-screen-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 13cqw;
+  margin-bottom: 4cqw;
+}
+.cocare-screen-header > svg {
+  position: absolute;
+  left: 0;
+  width: 7cqw;
+  height: 7cqw;
+  stroke-width: 3;
+}
+.cocare-screen-header h3 {
+  font-family: var(--fredoka);
+  font-weight: 500;
+  font-size: 6cqw;
+  line-height: 1.1;
+}
+.cocare-profile-photo {
+  display: block;
+  flex-shrink: 0;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+.pet-photo {
+  width: 100%;
+  background-size: 740%;
+  background-position: 13.4% 12.1%;
+}
+.carer-photo {
+  width: 22cqw;
+  background-size: 625%;
+  background-position: 24.9% 8.65%;
+}
+.cocare-pet-summary {
+  padding: 5cqw;
+  background: var(--brand-orange);
+  border-radius: 8cqw;
+  color: #fff;
+}
+.cocare-pet-identity {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5cqw;
+  min-height: 25cqw;
+}
+.cocare-pet-avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 24cqw;
+  border: 0.8cqw solid #fff;
+  border-radius: 50%;
+}
+.cocare-avatar-edit {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  right: -1cqw;
+  bottom: -1cqw;
+  width: 8cqw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--brand-orange);
+}
+.cocare-pet-avatar svg {
+  width: 4.5cqw;
+  height: 4.5cqw;
+}
+.cocare-pet-identity > div:nth-child(2) {
+  min-width: 0;
+}
+.cocare-pet-identity strong {
+  font-family: var(--fredoka);
+  font-weight: 600;
+  font-size: 9cqw;
+}
+.cocare-pet-identity p {
+  margin-top: 2cqw;
+  font-size: 3.6cqw;
+}
+.cocare-profile-edit {
+  position: absolute;
+  top: 1cqw;
+  right: 0;
+  width: 5cqw;
+  height: 5cqw;
+}
+.cocare-pet-badges {
+  display: flex;
+  gap: 2cqw;
+  margin-top: 6cqw;
+}
+.cocare-pet-badges > span {
+  flex: 1;
+  padding: 2cqw 0.5cqw;
+  border-radius: 10cqw;
+  background: var(--app-green);
+  text-align: center;
+  font-size: 3.2cqw;
+  white-space: nowrap;
+}
+.cocare-pet-badges > span:last-child {
+  background: #ffffff25;
+}
+.cocare-pet-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3cqw;
+  margin-top: 5cqw;
+}
+.cocare-pet-stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5cqw;
+  padding: 4cqw 1cqw;
+  background: #fff;
+  border-radius: 6cqw;
+  box-shadow: 0 1cqw 3cqw #27241f05;
+}
+.cocare-pet-stats svg {
+  width: 6cqw;
+  height: 6cqw;
+  margin-bottom: 1cqw;
+  color: var(--brand-orange);
+}
+.cocare-pet-stats strong {
+  font-family: var(--fredoka);
+  font-weight: 600;
+  font-size: 5.8cqw;
+}
+.cocare-pet-stats span {
+  color: var(--app-muted);
+}
+.cocare-profile-section-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6cqw 0 4cqw;
+}
+.cocare-profile-section-label h4,
+.cocare-permissions-label {
+  color: var(--app-label);
+  text-transform: uppercase;
+  letter-spacing: 0.4cqw;
+  font-size: 3.8cqw;
+  font-weight: 600;
+}
+.cocare-profile-section-label > span {
+  color: var(--brand-orange);
+  font-weight: 600;
+  font-size: 4.2cqw;
+}
+.cocare-profile-details dl {
+  padding: 0 5cqw;
+  border-radius: 6cqw;
+  background: #fff;
+}
+.cocare-profile-details dl > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 3cqw;
+  padding: 4.5cqw 0;
+}
+.cocare-profile-details dl > div + div {
+  border-top: 1px solid #f4f4f4;
+}
+.cocare-profile-details dt {
+  flex-shrink: 0;
+  color: var(--app-label);
+}
+.cocare-profile-details dd {
+  text-align: right;
+}
+.cocare-carer-identity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4cqw;
+  margin: 6cqw 0 11cqw;
+}
+.cocare-carer-identity strong {
+  font-family: var(--fredoka);
+  font-weight: 600;
+  font-size: 6.4cqw;
+}
+.cocare-carer-identity p {
+  margin-top: 2cqw;
+  color: var(--app-muted);
+  font-size: 4cqw;
+}
+.cocare-permissions-intro {
+  margin: 3cqw 0 6cqw;
+  color: var(--app-muted);
+  font-size: 3.8cqw;
+  line-height: 1.5;
+}
+.cocare-permissions-list {
+  display: grid;
+  gap: 3cqw;
+}
+.cocare-permission-row {
+  display: flex;
+  align-items: center;
+  gap: 3cqw;
+  width: 100%;
+  padding: 4cqw;
+  border: 1px solid #e8e8eb;
+  border-radius: 5cqw;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  font-size: inherit;
+}
+.cocare-permission-icon {
+  display: grid;
+  place-items: center;
+  width: 12cqw;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff0e6;
+  color: var(--brand-orange);
+}
+.cocare-permission-icon svg {
+  width: 6cqw;
+  height: 6cqw;
+  stroke-width: 2.4;
+}
+.cocare-permission-copy {
+  flex: 1;
+  min-width: 0;
+}
+.cocare-permission-copy strong {
+  display: block;
+  font-size: 4.1cqw;
+  font-weight: 650;
+  line-height: 1.2;
+}
+.cocare-permission-copy > span {
+  display: block;
+  margin-top: 1.7cqw;
+  color: var(--app-muted);
+  font-size: 3.4cqw;
+  line-height: 1.35;
+}
+.cocare-permission-switch {
+  position: relative;
+  align-self: flex-start;
+  flex-shrink: 0;
+  width: 18cqw;
+  height: 8.5cqw;
+  border-radius: 10cqw;
+  background: #cfd3db;
+  transition: background 0.15s;
+}
+.cocare-permission-switch::after {
+  content: "";
+  position: absolute;
+  top: 0.7cqw;
+  left: 0.7cqw;
+  width: 7.1cqw;
+  height: 7.1cqw;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s;
+}
+.cocare-permission-row[aria-checked="true"] .cocare-permission-switch {
+  background: var(--brand-orange);
+}
+.cocare-permission-row[aria-checked="true"] .cocare-permission-switch::after {
+  transform: translateX(9.5cqw);
+}
+.cocare-permission-row:focus-visible {
+  outline: 1px solid var(--app-green);
+  outline-offset: 1px;
+}

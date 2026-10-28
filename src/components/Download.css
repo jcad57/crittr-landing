@@ -1,0 +1,194 @@
+.download {
+  width: min(1320px, calc(100% - 40px));
+  margin: 0 auto;
+  position: relative;
+  background: #ffa360;
+  border: 2px solid #fffdf8;
+  border-radius: 40px;
+  overflow: hidden;
+  scroll-margin-top: 20px;
+}
+.download-inner {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 365px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.download-copy {
+  position: relative;
+  z-index: 2;
+  padding: 42px 0 37px;
+  margin-left: 130px;
+  width: 650px;
+  text-align: center;
+}
+.download .section-title {
+  font-size: clamp(32px, 3.4vw, 45px);
+  line-height: 1.14;
+}
+.download-copy > p {
+  font-size: 18px;
+  margin: 25px 0 24px;
+  line-height: 1.45;
+}
+.download .store-badges {
+  justify-content: center;
+}
+.download .underlined::after {
+  border-top-color: var(--brand-orange);
+  bottom: -8px;
+  height: 10px;
+  border-top-width: 5px;
+}
+.download .store-coming-soon {
+  color: #603b24;
+}
+.download-note {
+  position: absolute;
+  left: 25px;
+  top: 76px;
+  font-size: 29px;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+.download-note .doodle {
+  display: block;
+  margin: 10px auto;
+  width: 24px;
+  color: #b74c25;
+}
+.download-art {
+  position: absolute;
+  width: 475px;
+  max-width: none;
+  right: -135px;
+  bottom: -12px;
+  transform: rotate(-7deg);
+  aspect-ratio: 4 / 3;
+}
+.download-burst {
+  position: absolute;
+  left: 8%;
+  top: 14%;
+  width: 9%;
+  height: auto;
+  transform: rotate(155deg);
+  color: #f36f2a;
+}
+.download-heart {
+  position: absolute;
+  left: 29%;
+  top: 1%;
+  width: 7%;
+  height: auto;
+  transform: rotate(14deg);
+  color: #a84924;
+}
+@media (max-width: 1150px) {
+  .download-copy {
+    margin-left: 100px;
+    width: 600px;
+  }
+  .download-art {
+    width: 390px;
+    right: -125px;
+  }
+  .download .section-title {
+    font-size: 37px;
+  }
+  .download-note {
+    left: 21px;
+    font-size: 26px;
+  }
+  .download-copy > p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .download-inner {
+    min-height: 380px;
+  }
+  .download-copy {
+    margin-left: 45px;
+    width: 570px;
+  }
+  .download-art {
+    width: 330px;
+    right: -140px;
+  }
+  .download-note {
+    display: none;
+  }
+  .download .section-title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 640px) {
+  .download {
+    width: calc(100% - 24px);
+    border-radius: 30px;
+  }
+  .download-inner {
+    min-height: 570px;
+    align-items: flex-start;
+  }
+  .download-copy {
+    margin: 0;
+    width: 100%;
+    padding: 32px 15px 0;
+  }
+  .download .section-title {
+    font-size: 30px;
+    letter-spacing: -0.7px;
+  }
+  .download-copy > p {
+    font-size: 16px;
+    margin: 22px 0;
+  }
+  .download-break {
+    display: none;
+  }
+  .download .store-option {
+    width: 144px;
+  }
+  .download .store-badges {
+    gap: 10px;
+  }
+  .download-art {
+    width: 365px;
+    right: -15px;
+    bottom: -23px;
+    transform: rotate(-6deg);
+  }
+}
+@media (max-width: 359px) {
+  .download .section-title {
+    font-size: 26px;
+  }
+  .download .store-option {
+    width: 128px;
+  }
+  .download-copy {
+    padding-inline: 10px;
+  }
+  .download-art {
+    width: 330px;
+    right: -20px;
+  }
+  .download-inner {
+    min-height: 550px;
+  }
+}
+.download-cat {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 640px) {
+  .download-art {
+    width: min(365px, 100%);
+    right: 0;
+    bottom: -14px;
+  }
+}

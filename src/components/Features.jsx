@@ -1,70 +1,128 @@
+import { ArrowRight, BellRing, ClipboardList, Sparkles } from "lucide-react";
+import dog from "../assets/images/daily-routines.webp";
+import cat from "../assets/images/playful-tabby.webp";
+import together from "../assets/images/care-together-card.webp";
+import { Heart, Burst } from "./Doodles";
 import "./Features.css";
-
-const features = [
+const photoFeatures = [
   {
-    icon: "🐾",
-    title: "Detailed Pet Profiles",
-    desc: "Name, breed, photos, food preferences, vet clinic, microchip, insurance — everything about your pet in one place.",
+    title: "Let Crittr work for you",
+    desc: "Crittr turns your pet profile into an organized schedule that you can quickly check off as you go.",
+    image: dog,
+    alt: "Golden retriever enjoying a meal from a speckled ceramic bowl",
+    color: "sage",
+    category: "Daily routines",
+    href: "#how-it-works",
   },
   {
-    icon: "📋",
+    title: "Get notified when it's time",
+    desc: "Crittr will send you a reminder when it's time to give your pet their medication, upcoming vaccinations, and vet visits.",
+    image: cat,
+    alt: "Playful tabby cat lying on its back with four paws in the air",
+    color: "lavender",
+    category: "Health & records",
+    href: "#features",
+  },
+  {
+    title: "Co-Care Sharing",
+    desc: "Keep everyone in the loop with Crittr's co-care sharing feature. From family to trusted sitters, everyone stays in sync.",
+    image: together,
+    alt: "A woman gently kissing a tricolor Cavalier King Charles Spaniel",
+    color: "peach",
+    category: "Care together",
+    href: "#cocare",
+    pro: false,
+  },
+];
+const moreFeatures = [
+  {
+    icon: ClipboardList,
     title: "Activity Logging",
     desc: "Log walks, meals, treats, medications, and vet visits with ease. Review history and edit past entries anytime.",
   },
   {
-    icon: "💊",
-    title: "Health Hub",
-    desc: "Track medications, vaccination schedules, and upcoming vet visits so nothing slips through the cracks.",
-  },
-  {
-    icon: "🔔",
+    icon: BellRing,
     title: "Reminders & Notifications",
     desc: "Push notifications for medications, vet visits, and care schedules. Because memory isn't a care plan.",
-    pro: false,
   },
   {
-    icon: "✦",
+    icon: Sparkles,
     title: "CrittrAI Assistant",
     desc: "Ask questions grounded in your pet's actual data — not generic web results. Tailored answers for your furry friends.",
     pro: true,
   },
-  {
-    icon: "👥",
-    title: "Co-Care Sharing",
-    desc: "Invite family members or sitters by email with customized permission controls. Everyone stays in sync.",
-    pro: true,
-  },
 ];
-
 export default function Features() {
   return (
-    <section className="features" id="features">
-      <div className="features-inner">
-        <div className="section-label">What Crittr does</div>
-        <h2 className="section-title">
+    <section
+      className="features container"
+      id="how-it-works"
+      aria-labelledby="features-title"
+    >
+      <div className="section-heading">
+        <p className="section-label">What Crittr does</p>
+        <h2 className="section-title" id="features-title">
           Every tool a pet parent
-          <br />
-          <em>actually needs</em>
+          <br className="features-title-break" /> actually{" "}
+          <span className="accent-word">
+            needs.
+            <Burst />
+          </span>
         </h2>
         <p className="section-sub">
           Built around each pet's profile — a calm, organized home for
           everything about the animal you love.
         </p>
-
-        <div className="features-grid">
-          {features.map((f) => (
-            <div className="feature-card" key={f.title}>
-              <div className="feature-icon">{f.icon}</div>
-              <div className="feature-content">
-                <div className="feature-title-row">
-                  <h3>{f.title}</h3>
-                  {f.pro && <span className="pro-badge">Pro</span>}
-                </div>
-                <p>{f.desc}</p>
-              </div>
+      </div>
+      <div className="features-grid">
+        {photoFeatures.map((feature) => (
+          <article
+            className={`feature-card feature-${feature.color}`}
+            key={feature.title}
+          >
+            <div className="feature-photo">
+              <img
+                src={feature.image}
+                alt={feature.alt}
+                width="1200"
+                height="900"
+                loading="lazy"
+              />
+              {feature.color === "sage" ? <Burst /> : <Heart />}
             </div>
-          ))}
-        </div>
+            <div className="feature-content">
+              <div className="feature-category">{feature.category}</div>
+              <div className="feature-title-row">
+                <h3>{feature.title}</h3>
+                {feature.pro && <span className="pro-badge">Pro</span>}
+              </div>
+              <p>{feature.desc}</p>
+              <a
+                className="feature-arrow"
+                href={feature.href}
+                aria-label={`Learn about ${feature.title}`}
+              >
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div className="more-features">
+        {moreFeatures.map(({ icon: Icon, title, desc, pro }) => (
+          <article className="small-feature" key={title}>
+            <span className="small-feature-icon">
+              <Icon size={23} aria-hidden="true" />
+            </span>
+            <div>
+              <div className="feature-title-row">
+                <h3>{title}</h3>
+                {pro && <span className="pro-badge">Pro</span>}
+              </div>
+              <p>{desc}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

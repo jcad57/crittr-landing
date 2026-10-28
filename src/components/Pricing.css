@@ -1,259 +1,229 @@
 .pricing {
-  padding: 120px 24px;
+  padding: 82px 24px 70px;
   background: var(--cream);
-  position: relative;
 }
-
-.pricing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--sand-dark), transparent);
-}
-
 .pricing-inner {
   max-width: 900px;
   margin: 0 auto;
 }
-
+.pricing-inner > .section-label,
+.pricing-inner > .section-title,
+.pricing-inner > .section-sub {
+  text-align: center;
+}
+.pricing-inner > .section-title br {
+  display: none;
+}
+.pricing-inner > .section-sub {
+  margin: 16px 0 38px;
+}
 .pricing-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
-
 .pricing-card {
-  border-radius: 24px;
-  padding: 36px;
+  border-radius: 30px;
+  padding: 32px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
-
 .free-card {
-  background: var(--warm-white);
-  border: 1px solid var(--sand);
+  background: #fff;
+  border: 2px solid #101719;
 }
-
 .pro-card {
-  background: var(--bark);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 24px 60px rgba(44, 24, 16, 0.25);
+  background-color: #ffe6d5;
+  background-image: url("../assets/pro-confetti.svg");
+  background-size: 360px 420px;
+  border: 1px solid #ffd1b4;
 }
-
 .pro-ribbon {
   position: absolute;
-  top: -14px;
-  right: 28px;
-  background: var(--terracotta);
-  color: white;
-  font-size: 0.72rem;
-  font-weight: 700;
+  top: -13px;
+  right: 26px;
+  background: var(--brand-orange);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 800;
   padding: 5px 14px;
   border-radius: 20px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
-
 .plan-name {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+  font-family: var(--fredoka);
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
 }
-
-.free-card .plan-name { color: var(--text-muted); }
-.pro-card .plan-name { color: var(--gold); }
-
 .plan-price {
   display: flex;
   align-items: baseline;
-  gap: 6px;
+  gap: 7px;
   margin-bottom: 16px;
 }
-
 .price-amount {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
+  font-family: var(--fredoka);
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
 }
-
-.free-card .price-amount { color: var(--bark); }
-.pro-card .price-amount { color: var(--cream); }
-
 .price-period {
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-muted);
 }
-
-.free-card .price-period { color: var(--text-muted); }
-.pro-card .price-period { color: rgba(250,247,242,0.5); }
-
 .pro-billing {
   margin-bottom: 16px;
 }
-
 .pro-billing-tabs {
   display: flex;
   gap: 4px;
-  padding: 5px;
+  padding: 4px;
   margin-bottom: 18px;
-  background: rgba(0, 0, 0, 0.22);
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #f7d4bc;
+  border-radius: 50px;
 }
-
 .pro-billing-tab {
   flex: 1;
-  border: none;
+  border: 0;
   background: transparent;
-  color: rgba(250, 247, 242, 0.52);
+  color: #574b3e;
   font-family: inherit;
-  font-weight: 600;
-  font-size: 0.88rem;
-  min-height: 52px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 800;
+  font-size: 13px;
+  min-height: 46px;
+  padding: 8px 12px;
+  border-radius: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  line-height: 1.15;
+  gap: 7px;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
-
-.pro-billing-tab:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-}
-
 .pro-billing-tab.is-active {
-  background: var(--terracotta);
-  color: white;
-  box-shadow: 0 4px 16px rgba(196, 97, 58, 0.42);
+  background: var(--warm-white);
+  color: var(--text);
+  box-shadow: 0 2px 8px #a2572820;
 }
-
 .pro-billing-tab:not(.is-active):hover {
-  color: rgba(250, 247, 242, 0.92);
+  background: #ffffff55;
 }
-
 .pro-billing-tab-hint {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 5px;
+  background: #e3eace;
+  color: #4f623d;
+  border-radius: 20px;
 }
-
-.pro-billing-tab:not(.is-active) .pro-billing-tab-hint {
-  color: var(--gold);
-}
-
-.pro-billing-tab.is-active .pro-billing-tab-hint {
-  color: rgba(255, 255, 255, 0.82);
-}
-
 .pro-billing-panel .plan-price {
   margin-bottom: 8px;
 }
-
 .price-savings-line {
-  margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.45;
-  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #625549;
+  min-height: 36px;
 }
-
-.price-savings-line-muted {
-  opacity: 0.92;
-}
-
-.pro-card .price-savings-line { color: rgba(250, 247, 242, 0.55); }
-
 .plan-desc {
-  font-size: 0.88rem;
+  font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
+  color: #4d514d;
 }
-
-.free-card .plan-desc { color: var(--text-muted); }
-.pro-card .plan-desc { color: rgba(250,247,242,0.6); }
-
 .plan-features {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 32px;
+  gap: 11px;
+  margin-bottom: 28px;
 }
-
 .plan-features li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.88rem;
+  font-size: 14px;
 }
-
-.free-card .plan-features li { color: var(--bark); }
-.pro-card .plan-features li { color: rgba(250,247,242,0.85); }
-
 .feat-check {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   flex-shrink: 0;
   margin-top: 1px;
 }
-
-.free-check { color: var(--moss-light); }
-.pro-check { color: var(--gold); }
-
+.free-check {
+  color: #5a7544;
+}
+.pro-check {
+  color: #b14923;
+}
 .plan-btn {
   display: block;
   text-align: center;
-  padding: 14px;
+  padding: 13px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.2s;
+  font-weight: 800;
+  font-size: 14px;
+  transition:
+    background 0.2s,
+    transform 0.12s,
+    box-shadow 0.12s;
+  margin-top: auto;
 }
-
 .free-btn {
   background: transparent;
-  border: 2px solid var(--bark);
-  color: var(--bark);
+  border: 1.5px solid #101719;
+  color: var(--text);
 }
-
 .free-btn:hover {
-  background: var(--bark);
-  color: var(--cream);
+  background: #101719;
+  color: #fff;
 }
-
 .pro-btn {
-  background: var(--terracotta);
-  color: white;
-  box-shadow: 0 4px 20px rgba(196, 97, 58, 0.4);
+  background: var(--brand-orange);
+  border: 0;
+  color: #fff;
+  box-shadow: 0 5px 0 #101719;
 }
-
 .pro-btn:hover {
-  background: var(--terracotta-light);
-  transform: translateY(-1px);
+  background: #e77920;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #101719;
 }
-
+.pro-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #101719;
+}
 .plan-note {
   text-align: center;
-  font-size: 0.75rem;
-  color: rgba(250,247,242,0.4);
+  font-size: 11px;
+  color: #615348;
   margin-top: 12px;
 }
-
 @media (max-width: 680px) {
+  .pricing {
+    padding: 56px 20px 48px;
+  }
   .pricing-cards {
     grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 440px;
+    margin-inline: auto;
+  }
+  .pricing-card {
+    padding: 28px;
+  }
+  .pricing-inner > .section-title {
+    max-width: 370px;
+    margin-inline: auto;
+  }
+  .pricing-inner > .section-title br {
+    display: initial;
   }
 }

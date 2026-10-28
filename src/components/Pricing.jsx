@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { APP_STORE_URL } from "../constants/links";
+import { Link } from "react-router-dom";
+import { signupHref } from "../lib/signupIntent";
 import "./Pricing.css";
 
 const free = [
@@ -33,8 +34,7 @@ export default function Pricing() {
         <div className="section-label">Simple pricing</div>
         <h2 className="section-title">
           Start free,
-          <br />
-          <em>upgrade when ready.</em>
+          <br /> <em>upgrade when ready.</em>
         </h2>
         <p className="section-sub">No credit card to get started.</p>
 
@@ -56,14 +56,12 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <a
-              href={APP_STORE_URL}
+            <Link
+              to={signupHref()}
               className="plan-btn free-btn"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Download the App
-            </a>
+            </Link>
           </div>
 
           <div className="pricing-card pro-card">
@@ -74,6 +72,22 @@ export default function Pricing() {
                 className="pro-billing-tabs"
                 role="tablist"
                 aria-label="Crittr Pro billing period"
+                onKeyDown={(event) => {
+                  const tabs = Array.from(
+                    event.currentTarget.querySelectorAll('[role="tab"]'),
+                  );
+                  const current = tabs.indexOf(document.activeElement);
+                  let next;
+                  if (event.key === "ArrowRight" || event.key === "ArrowLeft")
+                    next = (current + 1) % tabs.length;
+                  if (event.key === "Home") next = 0;
+                  if (event.key === "End") next = tabs.length - 1;
+                  if (next !== undefined) {
+                    event.preventDefault();
+                    tabs[next].focus();
+                    setProBilling(next === 0 ? "annual" : "monthly");
+                  }
+                }}
               >
                 <button
                   type="button"
@@ -81,6 +95,7 @@ export default function Pricing() {
                   id="pro-tab-annual"
                   aria-controls="pro-panel-billing"
                   aria-selected={proBilling === "annual"}
+                  tabIndex={proBilling === "annual" ? 0 : -1}
                   className={`pro-billing-tab${proBilling === "annual" ? " is-active" : ""}`}
                   onClick={() => setProBilling("annual")}
                 >
@@ -93,6 +108,7 @@ export default function Pricing() {
                   id="pro-tab-monthly"
                   aria-controls="pro-panel-billing"
                   aria-selected={proBilling === "monthly"}
+                  tabIndex={proBilling === "monthly" ? 0 : -1}
                   className={`pro-billing-tab${proBilling === "monthly" ? " is-active" : ""}`}
                   onClick={() => setProBilling("monthly")}
                 >
@@ -110,7 +126,9 @@ export default function Pricing() {
                 {proBilling === "annual" ? (
                   <>
                     <div className="plan-price">
-                      <span className="price-amount">${PRO_ANNUAL.toFixed(2)}</span>
+                      <span className="price-amount">
+                        ${PRO_ANNUAL.toFixed(2)}
+                      </span>
                       <span className="price-period">/ year</span>
                     </div>
                     <p className="price-savings-line">
@@ -120,7 +138,9 @@ export default function Pricing() {
                 ) : (
                   <>
                     <div className="plan-price">
-                      <span className="price-amount">${PRO_MONTHLY.toFixed(2)}</span>
+                      <span className="price-amount">
+                        ${PRO_MONTHLY.toFixed(2)}
+                      </span>
                       <span className="price-period">/ month</span>
                     </div>
                     <p className="price-savings-line price-savings-line-muted">
@@ -141,15 +161,13 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <a
-              href={APP_STORE_URL}
+            <p className="plan-note">7-day free trial · Cancel anytime</p>
+            <Link
+              to={signupHref("pro", proBilling)}
               className="plan-btn pro-btn"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Start Free Trial
-            </a>
-            <p className="plan-note">7-day free trial · Cancel anytime</p>
+            </Link>
           </div>
         </div>
       </div>

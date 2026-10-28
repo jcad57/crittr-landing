@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <main className="privacy">
+    <main className="privacy" id="main-content">
       <div className="privacy-inner">
         <p className="privacy-eyebrow">Legal</p>
         <h1 className="privacy-title">Privacy policy</h1>

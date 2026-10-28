@@ -1,39 +1,43 @@
 import { Link } from "react-router-dom";
-import { APP_STORE_URL } from "../constants/links";
+import { signupHref } from "../lib/signupIntent";
+import Brand from "./Brand";
 import "./Footer.css";
-
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-inner">
+      <div className="footer-inner container">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">
-            crittr
-          </Link>
+          <Brand />
           <p>
             Built with care for pets
             <br />
             and the people who love them.
           </p>
         </div>
-        <div className="footer-links">
+        <nav className="footer-links" aria-label="Footer navigation">
           <div className="footer-col">
             <span className="footer-col-title">Product</span>
+            <a href="/#how-it-works">How it works</a>
             <a href="/#features">Features</a>
             <a href="/#pricing">Pricing</a>
-            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Link to={signupHref()}>
               Download
-            </a>
+            </Link>
           </div>
           <div className="footer-col">
             <span className="footer-col-title">Support</span>
             <a href="mailto:support@crittrapp.com">support@crittrapp.com</a>
+            <Link to="/privacy">Privacy policy</Link>
+            <Link to="/terms">Terms of Service</Link>
           </div>
-        </div>
+        </nav>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom container">
         <span>© 2026 Pegasys Studios. All rights reserved.</span>
-        <span>iOS · Android</span>
+        <span>
+          iOS · Android{" "}
+          <span className="footer-android-note">(coming soon)</span>
+        </span>
       </div>
     </footer>
   );
