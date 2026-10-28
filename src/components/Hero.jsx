@@ -68,7 +68,7 @@ export default function Hero() {
           </p>
           <StoreBadges />
           <div className="hero-actions">
-            <a href="#how-it-works">
+            <a href="#features">
               See how it works <ArrowRight size={17} aria-hidden="true" />
             </a>
           </div>

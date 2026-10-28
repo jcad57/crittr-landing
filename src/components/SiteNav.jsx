@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import { signupHref } from "../lib/signupIntent";
 import "./SiteNav.css";
 const links = [
-  ["How it works", "how-it-works"],
   ["Features", "features"],
-  ["Why Crittr", "why-crittr"],
+  ["Schedule", "schedule"],
+  ["Co-care", "cocare"],
+  ["Health", "pet-health"],
   ["Pricing", "pricing"],
 ];
 export default function SiteNav() {

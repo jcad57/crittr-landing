@@ -17,7 +17,7 @@ export default function Footer() {
         <nav className="footer-links" aria-label="Footer navigation">
           <div className="footer-col">
             <span className="footer-col-title">Product</span>
-            <a href="/#how-it-works">How it works</a>
+            <a href="/#features">How it works</a>
             <a href="/#features">Features</a>
             <a href="/#pricing">Pricing</a>
             <Link to={signupHref()}>

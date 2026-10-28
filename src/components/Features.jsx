@@ -12,7 +12,7 @@ const photoFeatures = [
     alt: "Golden retriever enjoying a meal from a speckled ceramic bowl",
     color: "sage",
     category: "Daily routines",
-    href: "#how-it-works",
+    href: "#schedule",
   },
   {
     title: "Get notified when it's time",
@@ -56,7 +56,7 @@ export default function Features() {
   return (
     <section
       className="features container"
-      id="how-it-works"
+      id="features"
       aria-labelledby="features-title"
     >
       <div className="section-heading">

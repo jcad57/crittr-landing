@@ -4,10 +4,14 @@ import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 
 export default function SiteLayout() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ block: "start" });
+      return;
+    }
     window.scrollTo({ top: 0, behavior: "instant" });
-  }, [pathname]);
+  }, [pathname, hash]);
   return (
     <div className="app">
       <SiteNav />

@@ -41,7 +41,7 @@ export default function DailyCare() {
   return (
     <section
       className="daily-care"
-      id="features"
+      id="schedule"
       aria-labelledby="daily-title"
     >
       <div className="daily-care-inner container">
