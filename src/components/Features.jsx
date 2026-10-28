@@ -7,7 +7,7 @@ import "./Features.css";
 const photoFeatures = [
   {
     title: "Let Crittr work for you",
-    desc: "Crittr turns your pet profile into an organized schedule that you can quickly check off as you go.",
+    desc: "From complex to simple pet needs, Crittr turns your pet's profile into an organized schedule that you can quickly check off throughout the day.",
     image: dog,
     alt: "Golden retriever enjoying a meal from a speckled ceramic bowl",
     color: "sage",
@@ -16,16 +16,16 @@ const photoFeatures = [
   },
   {
     title: "Get notified when it's time",
-    desc: "Crittr will send you a reminder when it's time to give your pet their medication, upcoming vaccinations, and vet visits.",
+    desc: "Store all your pet's medical information in your pet's profile and Crittr will send you a reminder when it's time to give your pet their medication, upcoming vaccinations, and vet visits.",
     image: cat,
     alt: "Playful tabby cat lying on its back with four paws in the air",
     color: "lavender",
     category: "Health & records",
-    href: "#features",
+    href: "#pet-health",
   },
   {
-    title: "Co-Care Sharing",
-    desc: "Keep everyone in the loop with Crittr's co-care sharing feature. From family to trusted sitters, everyone stays in sync.",
+    title: "Sharing is caring",
+    desc: "No need to write an essay about your pet's daily routine. Keep everyone in the loop with Crittr's co-care sharing feature. From family to trusted sitters, everyone stays in sync.",
     image: together,
     alt: "A woman gently kissing a tricolor Cavalier King Charles Spaniel",
     color: "peach",
@@ -43,12 +43,12 @@ const moreFeatures = [
   {
     icon: BellRing,
     title: "Reminders & Notifications",
-    desc: "Push notifications for medications, vet visits, and care schedules. Because memory isn't a care plan.",
+    desc: "Get notified when it's time to feed, give medications, or take your pet to the vet.",
   },
   {
     icon: Sparkles,
     title: "CrittrAI Assistant",
-    desc: "Ask questions grounded in your pet's actual data — not generic web results. Tailored answers for your furry friends.",
+    desc: "Ask questions grounded in your pet's actual data — not generic web results. Tailored answers just for you and your pet.",
     pro: true,
   },
 ];
@@ -70,8 +70,7 @@ export default function Features() {
           </span>
         </h2>
         <p className="section-sub">
-          Built around each pet's profile — a calm, organized home for
-          everything about the animal you love.
+          Built around each pet's profile — Crittr keeps you organized with a simple schedule and notifications.
         </p>
       </div>
       <div className="features-grid">

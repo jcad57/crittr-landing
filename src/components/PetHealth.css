@@ -1,0 +1,167 @@
+.pet-health {
+  position: relative;
+  padding-block: 200px 90px;
+}
+.health-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 80px;
+}
+.health-inner > * {
+  min-width: 0;
+}
+.health-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+.health-copy .section-title {
+  font-size: clamp(32px, 3.5vw, 46px);
+}
+.health-copy .section-sub {
+  margin-top: 26px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.health-benefits {
+  display: grid;
+  gap: 21px;
+  list-style: none;
+  margin-block: 26px 28px;
+}
+.health-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+.health-benefit-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 13px;
+  background: var(--lavender);
+  color: #715584;
+}
+.health-benefit-icon svg {
+  width: 21px;
+  height: 21px;
+}
+.health-benefits h3 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+.health-benefits p {
+  margin-top: 5px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.health-pro-tag {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #f8d6bc;
+  color: #793f1b;
+  font-size: 10px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+.health-benefits .health-pro-tag {
+  margin-left: 3px;
+}
+.health-copy .btn-primary {
+  min-height: 51px;
+  font-size: 15px;
+  padding-inline: 23px;
+}
+.health-plan-note {
+  max-width: 330px;
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.health-visual {
+  position: relative;
+  isolation: isolate;
+  grid-column: 1;
+  grid-row: 1;
+  padding-block: 28px 65px;
+}
+.health-visual::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -28px -25px 0;
+  border-radius: 45% 48% 43% 38%;
+  background: var(--lavender);
+  transform: rotate(-5deg);
+}
+@media (max-width: 1150px) {
+  .pet-health {
+    padding-top: 280px;
+  }
+  .health-inner {
+    gap: 48px;
+  }
+  .health-visual::before {
+    inset-inline: -15px;
+  }
+}
+@media (max-width: 850px) {
+  .health-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .health-copy {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 620px;
+  }
+  .health-copy .section-title {
+    font-size: clamp(32px, 5.5vw, 46px);
+  }
+  .health-visual {
+    grid-column: 1;
+    grid-row: 2;
+    width: min(490px, calc(100% - 20px));
+    justify-self: center;
+  }
+  .health-plan-note {
+    max-width: none;
+  }
+}
+@media (max-width: 760px) {
+  .pet-health {
+    padding-block: 235px 65px;
+  }
+  .health-visual {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .health-inner {
+    gap: 32px;
+  }
+  .health-copy .section-title {
+    font-size: clamp(29px, 8vw, 42px);
+  }
+  .health-benefits {
+    gap: 20px;
+  }
+  .health-benefits h3 {
+    font-size: 15px;
+  }
+  .health-benefits p {
+    font-size: 14px;
+  }
+  .health-visual {
+    width: calc(100% - 10px);
+  }
+  .health-visual::before {
+    inset: 0 -15px 10px;
+  }
+}

@@ -236,12 +236,14 @@ svg {
 }
 .underlined {
   position: relative;
+  isolation: isolate;
   display: inline-block;
   white-space: nowrap;
 }
 .underlined::after {
   content: "";
   position: absolute;
+  z-index: -1;
   bottom: -10px;
   left: 1%;
   width: 99%;

@@ -15,9 +15,9 @@ const benefits = [
     icon: PawPrint,
     text: (
       <>
-        All aspects
+        3 pets included,
         <br />
-        of pet care
+        upgrade for more
       </>
     ),
   },
@@ -25,9 +25,9 @@ const benefits = [
     icon: HeartIcon,
     text: (
       <>
-        Stay organized
+        Never miss
         <br />
-        and consistent
+        a medication
       </>
     ),
   },
@@ -35,19 +35,19 @@ const benefits = [
     icon: Users,
     text: (
       <>
-        Care together
+        Co-care together
         <br />
-        with family
+        with anyone
       </>
     ),
   },
   {
     icon: Sparkles,
-    text: (
+    text: ( 
       <>
-        Happier, healthier
+        Get personalized
         <br />
-        pets
+        help with Crittr AI
       </>
     ),
   },

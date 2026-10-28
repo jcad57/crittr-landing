@@ -61,14 +61,14 @@ export default function CoCare() {
           <p className="section-sub">
             Invite family members, partners, or trusted sitters by email. Set
             exactly what they can see and do — from full access to log-only.
-            Everyone stays in sync without the group chat chaos.
+            Crittr keeps everyone in sync.
           </p>
           <ul className="cocare-list">
             {[
-              "Invite by email with one tap",
-              "Unique permission controls per person",
-              "Real-time activity notifications",
               "Share with anyone",
+              "Get notified when someone completes a task",
+              "Unique permission controls per person",
+              "Schedules are synced automatically",
             ].map((item) => (
               <li key={item}>
                 <Check size={17} strokeWidth={2.6} aria-hidden="true" />
@@ -77,7 +77,7 @@ export default function CoCare() {
             ))}
           </ul>
           <Link to={signupHref("pro")} className="btn-primary">
-            Unlock Co-Care with Pro <ArrowRight aria-hidden="true" />
+            Let's get started <ArrowRight aria-hidden="true" />
           </Link>
         </div>
         <div
@@ -134,13 +134,12 @@ export default function CoCare() {
           </div> */}
           <Burst className="cocare-burst" />
           <div className="handwritten cocare-note" aria-hidden="true">
-            Same
+            We
             <br />
-            page.
+            got
             <br />
-            Happier
+            this.
             <br />
-            pets.
             <Heart />
           </div>
         </div>
