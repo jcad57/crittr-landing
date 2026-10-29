@@ -126,15 +126,7 @@ export default function CoCare() {
           >
             <PermissionsScreen />
           </AppPhone>
-          {/* <div className="cocare-notif">
-            <span className="notif-icon">
-              <Bell size={18} aria-hidden="true" />
-            </span>
-            <span>Ashley completed Roxy's evening meds</span>
-            <span className="notif-check">
-              <Check size={14} aria-hidden="true" />
-            </span>
-          </div> */}
+
           <Burst className="cocare-burst" />
           <div className="handwritten cocare-note" aria-hidden="true">
             We
