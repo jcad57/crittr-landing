@@ -13,7 +13,6 @@ export default function PetHealth() {
     >
       <div className="health-inner container">
         <div className="health-copy">
-          <p className="section-label">Health & medical records</p>
           <h2 className="section-title" id="health-title">
             We simplify
             <br />
@@ -55,17 +54,17 @@ export default function PetHealth() {
                   Less paper. More peace of mind.{" "}
                 </h3>
                 <p>
-                  Snap a photo or upload PDFs, keep files together in named
-                  records, and share them with your vet.
+                  With Crittr Pro, snap a photo or upload PDFs, keep files
+                  together in named records, and share them with your vet.
                 </p>
               </div>
             </li>
           </ul>
-          <Link to={signupHref("pro")} className="btn-primary">
+          <Link to={signupHref()} className="btn-primary">
             Make care feel simpler <ArrowRight aria-hidden="true" />
           </Link>
           <p className="health-plan-note">
-            Health tracking is free. Uploads come with Pro.
+            Unlimited medications and vaccinations on Free. Medical record storage and uploads require Pro.
           </p>
         </div>
 

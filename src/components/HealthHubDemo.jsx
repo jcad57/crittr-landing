@@ -201,7 +201,7 @@ export default function HealthHubDemo() {
                 <SectionHeading>Records</SectionHeading>
                 <ul className="hub-list-card">
                   <HealthRow image={microchipIcon} tone="sky" title="Microchip details" subtitle="Registry and ID" onClick={(event) => openScreen("microchip", event)} />
-                  <HealthRow image={medicalRecordsIcon} tone="orange" title="Medical Records" subtitle="Visit notes and your uploads" onClick={(event) => openScreen("records", event)} />
+                  <HealthRow image={medicalRecordsIcon} tone="orange" title="Medical Records" subtitle="Document storage with Pro" onClick={(event) => openScreen("records", event)} />
                 </ul>
               </>
             )}
@@ -225,7 +225,7 @@ export default function HealthHubDemo() {
             {screen === "microchip" && <DetailFields fields={[["Registry", "On file"], ["Microchip ID", "Example pet · ID on file"]]} />}
             {screen === "records" && (
               <>
-                <p className="hub-records-lead">Upload and store all your pet's important medical documents here. You can also share these documents with your vet.</p>
+                <p className="hub-records-lead">With Crittr Pro, upload and store your pet's important medical documents here. You can also share these documents with your vet.</p>
                 <div className="hub-records-label">Your uploads</div>
                 <ul className="hub-list-card"><HealthRow icon={FileText} tone="lavender" title="Roxy's annual checkup" subtitle="2 files · Oct 28, 2026" onClick={(event) => openScreen("record", event)} /></ul>
                 <div className="hub-records-label">From your vet</div>

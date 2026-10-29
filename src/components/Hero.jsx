@@ -15,7 +15,7 @@ const benefits = [
     icon: PawPrint,
     text: (
       <>
-        3 pets included,
+        3 pets on Free,
         <br />
         upgrade for more
       </>
@@ -35,9 +35,9 @@ const benefits = [
     icon: Users,
     text: (
       <>
-        Co-care together
+        1 co-carer per pet
         <br />
-        with anyone
+        included on Free
       </>
     ),
   },
@@ -45,9 +45,9 @@ const benefits = [
     icon: Sparkles,
     text: ( 
       <>
-        Get personalized
+        Help from CrittrAI
         <br />
-        help with Crittr AI
+        with Crittr Pro
       </>
     ),
   },

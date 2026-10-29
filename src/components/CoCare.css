@@ -56,6 +56,12 @@
 .cocare-list svg {
   color: #617e48;
 }
+.cocare-plan-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
 .cocare-text .btn-primary {
   font-size: 15px;
   min-height: 51px;

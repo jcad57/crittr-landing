@@ -16,7 +16,7 @@ const photoFeatures = [
   },
   {
     title: "Get notified when it's time",
-    desc: "Store all your pet's medical information in your pet's profile and Crittr will send you a reminder when it's time to give your pet their medication, upcoming vaccinations, and vet visits.",
+    desc: "Track medications, vaccinations, and vet visits on Free, with reminders to help you stay on schedule. Medical record storage and uploads come with Pro.",
     image: cat,
     alt: "Playful tabby cat lying on its back with four paws in the air",
     color: "lavender",
@@ -25,11 +25,11 @@ const photoFeatures = [
   },
   {
     title: "Sharing is caring",
-    desc: "No need to write an essay about your pet's daily routine. Keep everyone in the loop with Crittr's co-care sharing feature. From family to trusted sitters, everyone stays in sync.",
+    desc: "No need to write an essay about your pet's daily routine. Share it with 1 co-carer per pet on Free, or unlimited co-carers with Pro, so they can check off tasks as they go.",
     image: together,
     alt: "A woman gently kissing a tricolor Cavalier King Charles Spaniel",
     color: "peach",
-    category: "Care together",
+    category: "Co-care",
     href: "#cocare",
     pro: false,
   },
@@ -38,7 +38,7 @@ const moreFeatures = [
   {
     icon: ClipboardList,
     title: "Activity Logging",
-    desc: "Log walks, meals, treats, medications, and vet visits with ease. Review history and edit past entries anytime.",
+    desc: "Log unlimited walks, meals, treats, medications, and vet visits on Free. Review history and edit past entries anytime.",
   },
   {
     icon: BellRing,
@@ -60,7 +60,6 @@ export default function Features() {
       aria-labelledby="features-title"
     >
       <div className="section-heading">
-        <p className="section-label">What Crittr does</p>
         <h2 className="section-title" id="features-title">
           Every tool a pet parent
           <br className="features-title-break" /> actually{" "}

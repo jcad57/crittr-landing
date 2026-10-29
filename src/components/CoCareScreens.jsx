@@ -49,7 +49,7 @@ const permissions = [
   },
   {
     name: "Manage medical files",
-    description: "Add and manage medical record attachments",
+    description: "Upload and manage medical files with Pro",
     icon: FileHeart,
   },
 ];

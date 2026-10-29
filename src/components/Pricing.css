@@ -200,6 +200,12 @@
   transform: translateY(4px);
   box-shadow: 0 1px 0 #101719;
 }
+.plan-detail {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
 .plan-note {
   text-align: center;
   font-size: 11px;

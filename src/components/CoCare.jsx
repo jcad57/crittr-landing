@@ -49,7 +49,6 @@ export default function CoCare() {
     <section className="cocare" id="why-crittr" aria-labelledby="cocare-title">
       <div className="cocare-inner container">
         <div className="cocare-text" id="cocare">
-          <p className="section-label">Co-Care · Pro</p>
           <h2 className="section-title" id="cocare-title">
             Care is better
             <br />
@@ -65,7 +64,8 @@ export default function CoCare() {
           </p>
           <ul className="cocare-list">
             {[
-              "Share with anyone",
+              "1 co-carer per pet on Free",
+              "Unlimited co-carers with Pro",
               "Get notified when someone completes a task",
               "Unique permission controls per person",
               "Schedules are synced automatically",
@@ -76,7 +76,10 @@ export default function CoCare() {
               </li>
             ))}
           </ul>
-          <Link to={signupHref("pro")} className="btn-primary">
+          <p className="cocare-plan-note">
+            The pet owner’s plan sets the limit. Co-carers can join on Free.
+          </p>
+          <Link to={signupHref()} className="btn-primary">
             Let's get started <ArrowRight aria-hidden="true" />
           </Link>
         </div>

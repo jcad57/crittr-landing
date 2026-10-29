@@ -53,13 +53,6 @@ export default function DailyCare() {
             height="1200"
             loading="lazy"
           />
-          <div className="handwritten daily-photo-note" aria-hidden="true">
-            <span>Good</span>
-            <span>Care</span>
-            <span>Brighter</span>
-            <span>Days</span>
-            <Heart />
-          </div>
         </div>
         <div className="daily-copy">
           <h2 className="section-title" id="daily-title">

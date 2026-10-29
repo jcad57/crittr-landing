@@ -4,20 +4,20 @@ import { signupHref } from "../lib/signupIntent";
 import "./Pricing.css";
 
 const free = [
-  "Full profile for 1 pet",
-  "Unlimited activity logging",
-  "Health hub (meds, vaccines, weight)",
-  "Vet visit tracking",
-  "Dashboard & history",
+  "Profiles for up to 3 pets",
+  "1 co-carer per pet",
+  "Unlimited activity logs & history",
+  "Unlimited foods, medications & vaccinations",
+  "Health hub, weight & vet visit tracking",
+  "Push notifications & reminders",
 ];
 
 const pro = [
   "Unlimited pets",
-  "Co-care sharing & permissions",
-  "Medical record attachments",
-  "CrittrAI pet assistant",
-  "Push notifications & reminders",
-  "Priority support",
+  "Unlimited co-carers",
+  "Medical record storage",
+  "CrittrAI",
+  "No ads",
 ];
 
 const PRO_MONTHLY = 4.99;
@@ -31,7 +31,6 @@ export default function Pricing() {
   return (
     <section className="pricing" id="pricing">
       <div className="pricing-inner">
-        <div className="section-label">Simple pricing</div>
         <h2 className="section-title">
           Start free,
           <br /> <em>upgrade when ready.</em>
@@ -46,7 +45,7 @@ export default function Pricing() {
               <span className="price-period">forever</span>
             </div>
             <p className="plan-desc">
-              Everything you need to get one pet fully set up and cared for.
+              Everyday care for up to 3 pets, with 1 co-carer for each.
             </p>
             <ul className="plan-features">
               {free.map((f) => (
@@ -56,6 +55,10 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
+            <p className="plan-detail">
+              All owned pets count, including memorialized pets. Shared pets
+              don’t use your 3-pet allowance.
+            </p>
             <Link
               to={signupHref()}
               className="plan-btn free-btn"
@@ -151,7 +154,7 @@ export default function Pricing() {
               </div>
             </div>
             <p className="plan-desc">
-              Unlimited pets, shared care, AI help, and peace of mind reminders.
+              Everything in Free, plus more room for your pets and their people.
             </p>
             <ul className="plan-features">
               {pro.map((f) => (
@@ -161,7 +164,7 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <p className="plan-note">7-day free trial · Cancel anytime</p>
+            <p className="plan-note">7-day free trial for eligible accounts · Cancel anytime</p>
             <Link
               to={signupHref("pro", proBilling)}
               className="plan-btn pro-btn"
