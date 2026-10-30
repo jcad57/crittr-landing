@@ -121,13 +121,11 @@ svg {
   letter-spacing: -1.6px;
   text-decoration: none;
 }
-.brand-paw {
+.brand-mark {
   width: 35px;
   height: 35px;
-  color: var(--brand-orange);
-  fill: currentColor;
-  transform: rotate(12deg);
-  stroke-width: 1.5px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .btn-primary {
   display: inline-flex;
@@ -299,7 +297,7 @@ a.store-option:hover {
   .brand {
     font-size: 35px;
   }
-  .brand-paw {
+  .brand-mark {
     width: 29px;
     height: 29px;
   }

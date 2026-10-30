@@ -1,3 +1,5 @@
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../constants/links.js";
+
 const PENDING_KEY = "crittr-signup-choice";
 
 export function readSignupChoice(search = "") {
@@ -77,6 +79,12 @@ export function detectDevice(navigatorInfo) {
   return "desktop";
 }
 
+export function appStoreUrl(device) {
+  if (device === "ios") return APP_STORE_URL;
+  if (device === "android") return GOOGLE_PLAY_URL;
+  return null;
+}
+
 export function downloadUrl(choice, origin = window.location.origin) {
   const configured = import.meta.env?.VITE_PUBLIC_SITE_URL;
   let base = origin;
@@ -89,5 +97,7 @@ export function downloadUrl(choice, origin = window.location.origin) {
       /* fall back to the actual website origin */
     }
   }
-  return `${base}/get-app?${choiceQuery(choice)}`;
+  return choice
+    ? `${base}/get-app?${choiceQuery(choice)}`
+    : `${base}/download`;
 }

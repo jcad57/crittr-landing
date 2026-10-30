@@ -31,6 +31,7 @@ export default function App() {
             <Route path="/signup" element={<Signup key="signup" />} />
             <Route path="/login" element={<Signup key="login" />} />
             <Route path="/get-app" element={<GetApp />} />
+            <Route path="/download" element={<GetApp downloadFirst />} />
             <Route path="/auth/callback" element={<AuthCallback />} />
           </Route>
         </Routes>

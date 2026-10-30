@@ -96,6 +96,31 @@
 .signup-pets img {
   width: 100%;
 }
+.signup-download {
+  max-width: 400px;
+  margin-top: 24px;
+}
+.signup-download-qr {
+  width: min(280px, 100%);
+  margin: 0 0 20px;
+  background: #fff;
+  border: 3px solid #e9e5dd;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.signup-download-qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.signup-download .store-badges,
+.signup-mobile-download .store-badges {
+  justify-content: flex-start;
+  gap: 12px;
+}
+.signup-mobile-download {
+  display: none;
+}
 .signup-pets-note {
   position: absolute;
   left: -10px;
@@ -753,6 +778,37 @@
   }
   .signup-story {
     display: none;
+  }
+  .signup-layout-download .signup-story {
+    display: block;
+  }
+  .signup-layout .account-header {
+    display: none;
+  }
+  .signup-layout-download .signup-story > h1,
+  .signup-layout-download .signup-story > p {
+    display: none;
+  }
+  .signup-download {
+    display: none;
+  }
+  .signup-mobile-download {
+    display: block;
+    max-width: 400px;
+    margin: 16px auto 0;
+  }
+  .signup-mobile-download .store-badges {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+  }
+  .signup-download-or {
+    margin: 0 0 16px;
+    color: #686b62;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
   }
   .signup-card {
     padding: 28px 30px;

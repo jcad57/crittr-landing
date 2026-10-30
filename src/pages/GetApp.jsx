@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { APP_STORE_URL } from "../constants/links";
 import {
+  appStoreUrl,
   detectDevice,
   downloadUrl,
   readSignupChoice,
@@ -17,16 +18,22 @@ import {
 } from "../lib/signupIntent";
 import { supabase } from "../lib/supabase";
 import appStoreBadge from "../assets/badges/app-store.svg";
+import googlePlayBadge from "../assets/badges/google-play.svg";
 
-export default function GetApp() {
+export default function GetApp({ downloadFirst = false }) {
   const [params] = useSearchParams();
   const choice = readSignupChoice(params);
   const device = detectDevice(window.navigator);
+  const storeUrl = appStoreUrl(device);
   const [user, setUser] = useState(null);
   const [copyStatus, setCopyStatus] = useState("");
-  const url = downloadUrl(choice);
+  const url = downloadUrl(downloadFirst ? undefined : choice);
+  useEffect(() => {
+    if (downloadFirst && storeUrl) window.location.replace(storeUrl);
+  }, [downloadFirst, storeUrl]);
   useEffect(() => {
     document.title = "Your next good day starts here — Crittr";
+    if (downloadFirst) return;
     let active = true;
     supabase?.auth.getSession().then(({ data }) => {
       if (active) setUser(data.session?.user || null);
@@ -34,7 +41,7 @@ export default function GetApp() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [downloadFirst]);
   async function copyLink() {
     try {
       await navigator.clipboard.writeText(url);
@@ -54,7 +61,7 @@ export default function GetApp() {
         <h1 id="handoff-heading">
           {device === "desktop"
             ? "Meet us on your phone"
-            : device === "ios"
+            : storeUrl
               ? "Your pets. In your pocket."
               : "Android is on its way"}
         </h1>
@@ -63,7 +70,11 @@ export default function GetApp() {
             ? "Scan this QR code to download Crittr on your phone."
             : device === "ios"
               ? "Crittr is ready for you on the App Store."
-              : "Your account is ready when you are. Crittr for Android is coming soon."}
+              : storeUrl
+                ? "Crittr is ready for you on Google Play."
+                : downloadFirst
+                  ? "Crittr for Android is coming soon. You can sign up in the app when it arrives."
+                  : "Your account is ready when you are. Crittr for Android is coming soon."}
         </p>
         {device === "desktop" && (
           <>
@@ -92,23 +103,33 @@ export default function GetApp() {
             </p>
           </>
         )}
-        {device !== "android" && (
+        {(device !== "android" || storeUrl) && (
           <a
             className="handoff-store"
-            href={APP_STORE_URL}
-            aria-label="Download Crittr on the App Store"
+            href={storeUrl || APP_STORE_URL}
+            aria-label={
+              device === "android"
+                ? "Download Crittr on Google Play"
+                : "Download Crittr on the App Store"
+            }
           >
             <img
-              src={appStoreBadge}
+              src={device === "android" ? googlePlayBadge : appStoreBadge}
               width="182"
               height="60"
-              alt="Download on the App Store"
+              alt={
+                device === "android"
+                  ? "Get it on Google Play"
+                  : "Download on the App Store"
+              }
             />
           </a>
         )}
-        <p className="handoff-android">
-          Android coming soon <Heart size={13} aria-hidden="true" />
-        </p>
+        {!appStoreUrl("android") && (
+          <p className="handoff-android">
+            Android coming soon <Heart size={13} aria-hidden="true" />
+          </p>
+        )}
         {device !== "desktop" && (
           <a className="btn-primary handoff-open" href="crittr://dashboard">
             Already installed? Open Crittr{" "}

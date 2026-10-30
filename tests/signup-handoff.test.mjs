@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
+  appStoreUrl,
   choiceQuery,
   detectDevice,
   downloadUrl,
@@ -8,6 +9,7 @@ import {
   readSignupChoice,
   signupHref,
 } from "../src/lib/signupIntent.js";
+import { APP_STORE_URL } from "../src/constants/links.js";
 import { authMessage, saveAccountChoice } from "../src/services/webAuth.js";
 
 test("CTA choices are allowlisted and preserve monthly/annual Pro selection", () => {
@@ -87,6 +89,30 @@ test("QR handoff URL contains only plan preferences, with no account data or cre
   assert.deepEqual([...url.searchParams.keys()], ["plan", "billing"]);
   assert.equal(url.href.includes("private"), false);
   assert.equal(url.href.includes("secret"), false);
+});
+
+test("download-first QR uses one public URL without an account or plan", () => {
+  const url = new URL(downloadUrl(undefined, "https://crittr.example"));
+  assert.equal(url.href, "https://crittr.example/download");
+  assert.equal(url.search, "");
+});
+
+test("smart download sends iOS to its store and keeps Android coming soon", () => {
+  assert.equal(
+    appStoreUrl(detectDevice({ userAgent: "Mozilla iPhone" })),
+    APP_STORE_URL,
+  );
+  assert.equal(
+    appStoreUrl(
+      detectDevice({ userAgent: "Mozilla Macintosh", maxTouchPoints: 5 }),
+    ),
+    APP_STORE_URL,
+  );
+  assert.equal(
+    appStoreUrl(detectDevice({ userAgent: "Mozilla Android" })),
+    null,
+  );
+  assert.equal(appStoreUrl("desktop"), null);
 });
 
 test("intent save requires an authenticated user and propagates failed writes for retry", async () => {

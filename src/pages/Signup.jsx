@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 import {
   Link,
   useLocation,
@@ -18,6 +19,7 @@ import { requireAuth, supabase } from "../lib/supabase";
 import {
   choiceQuery,
   clearRememberedChoice,
+  downloadUrl,
   intentMetadata,
   readSignupChoice,
   rememberChoice,
@@ -28,6 +30,7 @@ import catIcon from "../assets/icons/cat-icon.png";
 import dogIcon from "../assets/icons/dog-icon.png";
 import fishIcon from "../assets/icons/fishbowl-icon.png";
 import Brand from "../components/Brand";
+import StoreBadges from "../components/StoreBadges";
 
 function PasswordField({ value, onChange, newPassword = false }) {
   const [visible, setVisible] = useState(false);
@@ -66,6 +69,7 @@ function PasswordField({ value, onChange, newPassword = false }) {
 export default function Signup() {
   const [params] = useSearchParams();
   const { pathname } = useLocation();
+  const showDownload = pathname === "/signup" || pathname === "/signup/";
   const navigate = useNavigate();
   const choice = readSignupChoice(params);
   const pro = choice.plan === "pro";
@@ -271,7 +275,10 @@ export default function Signup() {
       "Your account is ready. We’re saving your preference before you continue.",
   }[step];
   return (
-    <main className="signup-layout" id="main-content">
+    <main
+      className={`signup-layout${showDownload ? " signup-layout-download" : ""}`}
+      id="main-content"
+    >
       <aside className="signup-story" aria-label="More good days together">
         <header className="account-header">
           <Brand />
@@ -286,13 +293,30 @@ export default function Signup() {
         <p>
           Pet care is about to get a whole lot easier. Simple or complex, Crittr has you covered.
         </p>
-        <div className="signup-pets">
-          <img
-            src={pets}
-            alt="A happy golden retriever and tabby cat cuddled together on a blanket"
-          />
-        </div>
-       
+        {showDownload ? (
+          <section
+            className="signup-download"
+            aria-label="Download Crittr"
+          >
+            <div className="signup-download-qr">
+              <QRCodeSVG
+                value={downloadUrl()}
+                size={280}
+                level="M"
+                marginSize={2}
+                title="Scan to download Crittr on your phone"
+              />
+            </div>
+            <StoreBadges directDownload />
+          </section>
+        ) : (
+          <div className="signup-pets">
+            <img
+              src={pets}
+              alt="A happy golden retriever and tabby cat cuddled together on a blanket"
+            />
+          </div>
+        )}
       </aside>
       <section className="signup-card" aria-labelledby="signup-heading">
         <div className="signup-plan">
@@ -630,6 +654,10 @@ export default function Signup() {
         ) : null}
      
       </section>
+      <div className="signup-mobile-download">
+        <p className="signup-download-or">or</p>
+        <StoreBadges directDownload />
+      </div>
     </main>
   );
 }

@@ -8,6 +8,13 @@ database or web checkout.
 
 1. Acquisition CTAs open `/signup?plan=free` or
    `/signup?plan=pro&billing=annual|monthly`.
+   The signup page also offers a direct App Store badge and a large QR code so
+   visitors can download first and create their account in the app. The single
+   QR URL is `/download`, with no account or plan information. This public route
+   automatically opens the App Store on iOS (including iPad), shows Android's
+   coming-soon state, and offers the QR and store link on desktop. Set
+   `GOOGLE_PLAY_URL` in `src/constants/links.js` to the live listing at Android
+   launch; the same printed QR will then route Android devices to Google Play.
 2. Email signup sends the same first/last-name metadata as the app. Confirmation
    uses the app’s six-digit email OTP flow. Existing members can sign in, verify
    an unconfirmed email, or reset their password using a recovery OTP.
@@ -70,8 +77,8 @@ reopening a dismissed paywall if acknowledgement fails.
   particular, Apple web OAuth needs the Apple Services ID and valid signing
   secret, not just native Sign in with Apple. Test both providers on the public
   origin before launch; provider availability alone does not verify web setup.
-- Deploy with SPA fallbacks so direct visits to `/signup`, `/get-app`, `/terms`,
-  and `/auth/callback` serve `index.html`. Netlify `_redirects` and Vercel rewrites
+- Deploy with SPA fallbacks so direct visits to `/signup`, `/download`, `/get-app`,
+  `/terms`, and `/auth/callback` serve `index.html`. Netlify `_redirects` and Vercel rewrites
   are included. Configure an equivalent fallback on other hosts.
 - Release the native app changes in the sibling `crittr` repository. Previously
   installed builds cannot read this new intent until updated. No SQL migration
