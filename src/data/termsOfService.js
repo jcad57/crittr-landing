@@ -1,6 +1,4 @@
-/**
- * Draft terms for product/legal iteration. Replace with counsel-approved text before launch.
- */
+/** Mirrors the mobile app content/termsOfService.ts; keep the published notices aligned. */
 export const termsOfServiceSections = [
   {
     title: "Agreement",
@@ -43,7 +41,7 @@ export const termsOfServiceSections = [
     paragraphs: [
       "Paid plans are billed through the app store shown at checkout (Apple App Store on iOS, Google Play on Android). Fees, renewal periods, taxes, free trials, and cancellation rights are governed by the relevant app store and any additional terms presented at purchase.",
       "Unless stated otherwise at checkout, subscriptions renew automatically until cancelled in your platform account settings.",
-      "Where ads are shown (including app-open and interstitial formats), third-party advertising networks may collect identifiers subject to their policies and your device settings. Ad-supported experiences may not appear for Crittr Pro subscribers as implemented in the current version of the app.",
+      "Where ads are shown (including banner and interstitial formats), third-party advertising networks may collect identifiers subject to their policies and your device settings. Ad-supported experiences may not appear for Crittr Pro subscribers as implemented in the current version of the app.",
     ],
   },
   {
@@ -89,7 +87,7 @@ export const termsOfServiceSections = [
   {
     title: "Termination",
     paragraphs: [
-      "You may stop using Crittr at any time. Features to delete your account and associated data may be offered in-app; deletion may take time to propagate across backups.",
+      "You may stop using Crittr at any time and request account deletion in Settings or by contacting support@crittrapp.com. Deletion may take time to propagate across backups. Deleting your account does not cancel an App Store or Google Play subscription; manage or cancel it separately with the store that bills you.",
       "We may suspend or terminate access if you breach these Terms, if we must comply with law, or if we discontinue the Service with reasonable notice where practicable.",
     ],
   },

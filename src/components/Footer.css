@@ -42,6 +42,9 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.footer-col .footer-delete-link {
+  font-weight: 800;
+}
 .footer-bottom {
   border-top: 1px solid #e5dfd5;
   padding-top: 22px;

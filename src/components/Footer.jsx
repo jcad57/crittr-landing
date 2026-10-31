@@ -29,6 +29,7 @@ export default function Footer() {
             <a href="mailto:support@crittrapp.com">support@crittrapp.com</a>
             <Link to="/privacy">Privacy policy</Link>
             <Link to="/terms">Terms of Service</Link>
+            <Link to="/delete-account" className="footer-delete-link">Delete account & data</Link>
           </div>
         </nav>
       </div>
